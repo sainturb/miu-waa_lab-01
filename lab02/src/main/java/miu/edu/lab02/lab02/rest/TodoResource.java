@@ -10,32 +10,32 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("api")
+@RequestMapping("api/todos")
 public class TodoResource {
 
     private final TodoService todoService;
 
-    @GetMapping("todos")
+    @GetMapping
     public List<TodoDTO> getTodos() {
         return todoService.findAll();
     }
 
-    @PostMapping("todos")
+    @PostMapping
     public TodoDTO save(@RequestBody Todo body) {
         return todoService.save(body);
     }
 
-    @PutMapping("todos/{id}")
+    @PutMapping("{id}")
     public TodoDTO update(@PathVariable Integer id, @RequestBody Todo body) {
         return todoService.update(id, body);
     }
 
-    @GetMapping("todos/{id}")
+    @GetMapping("{id}")
     public TodoDTO getTodo(@PathVariable Integer id) {
         return todoService.findOne(id);
     }
 
-    @DeleteMapping("todos/{id}")
+    @DeleteMapping("{id}")
     public void delete(@PathVariable Integer id) {
         todoService.delete(id);
     }
