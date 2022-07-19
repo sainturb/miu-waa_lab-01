@@ -1,20 +1,20 @@
 package miu.edu.lab02.rest;
 
-import miu.edu.lab02.dto.TodoDTO;
-import miu.edu.lab02.service.TodoService;
+import miu.edu.lab02.model.Course;
+import miu.edu.lab02.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class GraphTodoResource {
+public class GraphCourseResource {
 
     @Autowired
-    TodoService todoService;
+    CourseService service;
 
     @QueryMapping
-    public TodoDTO todoById(@Argument Integer id) {
-        return todoService.findOne(id);
+    public Course todoById(@Argument Integer id) {
+        return service.findOne(id);
     }
 }
