@@ -1,4 +1,4 @@
-package miu.edu.lab02.lab02;
+package miu.edu.lab02;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

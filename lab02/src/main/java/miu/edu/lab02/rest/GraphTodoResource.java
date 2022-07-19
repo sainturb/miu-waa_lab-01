@@ -1,7 +1,7 @@
-package miu.edu.lab02.lab02.rest;
+package miu.edu.lab02.rest;
 
-import miu.edu.lab02.lab02.dto.TodoDTO;
-import miu.edu.lab02.lab02.service.TodoService;
+import miu.edu.lab02.dto.TodoDTO;
+import miu.edu.lab02.service.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;

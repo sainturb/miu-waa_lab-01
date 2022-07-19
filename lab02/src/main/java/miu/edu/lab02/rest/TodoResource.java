@@ -1,9 +1,9 @@
-package miu.edu.lab02.lab02.rest;
+package miu.edu.lab02.rest;
 
 import lombok.RequiredArgsConstructor;
-import miu.edu.lab02.lab02.dto.TodoDTO;
-import miu.edu.lab02.lab02.model.Todo;
-import miu.edu.lab02.lab02.service.TodoService;
+import miu.edu.lab02.dto.TodoDTO;
+import miu.edu.lab02.model.Todo;
+import miu.edu.lab02.service.TodoService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

@@ -1,9 +1,9 @@
-package miu.edu.lab02.lab02.service;
+package miu.edu.lab02.service;
 
 import lombok.RequiredArgsConstructor;
-import miu.edu.lab02.lab02.dto.TodoDTO;
-import miu.edu.lab02.lab02.model.Todo;
-import miu.edu.lab02.lab02.repository.TodoRepository;
+import miu.edu.lab02.dto.TodoDTO;
+import miu.edu.lab02.model.Todo;
+import miu.edu.lab02.repository.TodoRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;

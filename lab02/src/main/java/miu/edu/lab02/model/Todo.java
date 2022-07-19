@@ -1,4 +1,4 @@
-package miu.edu.lab02.lab02.model;
+package miu.edu.lab02.model;
 
 import lombok.Data;
 import lombok.Getter;

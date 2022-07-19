@@ -1,4 +1,4 @@
-package miu.edu.lab02.lab02.dto;
+package miu.edu.lab02.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
