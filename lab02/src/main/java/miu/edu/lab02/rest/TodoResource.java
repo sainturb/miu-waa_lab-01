@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import miu.edu.lab02.dto.TodoDTO;
 import miu.edu.lab02.model.Todo;
 import miu.edu.lab02.service.TodoService;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,6 +22,7 @@ public class TodoResource {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public TodoDTO save(@RequestBody Todo body) {
         return todoService.save(body);
     }
