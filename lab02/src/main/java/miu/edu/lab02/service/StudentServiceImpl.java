@@ -1,6 +1,7 @@
 package miu.edu.lab02.service;
 
 import lombok.RequiredArgsConstructor;
+import miu.edu.lab02.model.Course;
 import miu.edu.lab02.model.Student;
 import miu.edu.lab02.repository.StudentRepository;
 import org.springframework.stereotype.Service;
@@ -40,4 +41,13 @@ public class StudentServiceImpl implements StudentService {
     public void delete(Integer id) {
         repository.deleteById(id);
     }
+
+    public List<Student> getStudentsByMajor(String major) {
+        return this.repository.findByMajor(major);
+    }
+
+    public List<Course> getCoursesByStudentId(Integer id) {
+        return this.findOne(id).getCoursesTaken();
+    }
+
 }

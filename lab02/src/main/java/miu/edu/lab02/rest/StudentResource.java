@@ -1,8 +1,8 @@
 package miu.edu.lab02.rest;
 
 import lombok.RequiredArgsConstructor;
-import miu.edu.lab02.model.Course;
-import miu.edu.lab02.service.CourseService;
+import miu.edu.lab02.model.Student;
+import miu.edu.lab02.service.StudentServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,31 +13,41 @@ import java.util.List;
 @RequestMapping("api/students")
 public class StudentResource {
 
-    private final CourseService courseService;
+    private final StudentServiceImpl studentService;
 
     @GetMapping
-    public List<Course> getCourses() {
-        return courseService.findAll();
+    public List<Student> getStudents() {
+        return studentService.findAll();
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Course save(@RequestBody Course body) {
-        return courseService.save(body);
+    public Student save(@RequestBody Student body) {
+        return studentService.save(body);
     }
 
     @PutMapping("{id}")
-    public Course update(@PathVariable Integer id, @RequestBody Course body) {
-        return courseService.update(id, body);
+    public Student update(@PathVariable Integer id, @RequestBody Student body) {
+        return studentService.update(id, body);
     }
 
     @GetMapping("{id}")
-    public Course getCourse(@PathVariable Integer id) {
-        return courseService.findOne(id);
+    public Student getStudent(@PathVariable Integer id) {
+        return studentService.findOne(id);
     }
 
     @DeleteMapping("{id}")
     public void delete(@PathVariable Integer id) {
-        courseService.delete(id);
+        studentService.delete(id);
+    }
+
+    @GetMapping("filter-by-major/{major}")
+    public void filterByMajor(@PathVariable String major) {
+        studentService.getStudentsByMajor(major);
+    }
+
+    @GetMapping("courses/{id}")
+    public void filterByMajor(@PathVariable Integer id) {
+        studentService.getCoursesByStudentId(id);
     }
 }

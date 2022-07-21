@@ -24,5 +24,5 @@ public class Student {
 
     @OneToMany
     List<Course> coursesTaken;
-    String gpa;
+    Double gpa;
 }
