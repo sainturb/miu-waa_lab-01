@@ -1,12 +1,10 @@
-package miu.edu.lab03.service;
+package miu.edu.lab04.service;
 
 import lombok.RequiredArgsConstructor;
-import miu.edu.lab03.model.Student;
-import miu.edu.lab03.repository.StudentRepository;
-import miu.edu.lab03.repository.FacultyRepository;
+import miu.edu.lab04.model.Student;
+import miu.edu.lab04.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

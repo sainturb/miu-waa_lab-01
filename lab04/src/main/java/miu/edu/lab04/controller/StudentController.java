@@ -1,9 +1,9 @@
-package miu.edu.lab03.controller;
+package miu.edu.lab04.controller;
 
 import lombok.RequiredArgsConstructor;
-import miu.edu.lab03.dto.FacultyDTO;
-import miu.edu.lab03.model.Faculty;
-import miu.edu.lab03.service.FacultyServiceImpl;
+import miu.edu.lab04.dto.StudentDTO;
+import miu.edu.lab04.model.Student;
+import miu.edu.lab04.service.StudentServiceImpl;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,15 +13,15 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("api/faculties")
+@RequestMapping("api/students")
 @RequiredArgsConstructor
-public class FacultyController {
-    private final FacultyServiceImpl service;
+public class StudentController {
+    private final StudentServiceImpl service;
 
     private final ModelMapper mapper;
 
     @GetMapping
-    public List<FacultyDTO> getAll() {
+    public List<StudentDTO> getAll() {
         return service.getAll()
                 .stream()
                 .map(this::toDTO)
@@ -29,7 +29,7 @@ public class FacultyController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<FacultyDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<StudentDTO> getById(@PathVariable Long id) {
         return service.getById(id)
                 .map(this::toDTO)
                 .map(ResponseEntity::ok)
@@ -37,14 +37,14 @@ public class FacultyController {
     }
 
     @PostMapping
-    public FacultyDTO save(@RequestBody Faculty faculty) {
-        return this.toDTO(service.save(faculty));
+    public StudentDTO save(@RequestBody Student student) {
+        return this.toDTO(service.save(student));
     }
 
     @PutMapping("/{id}")
-    public FacultyDTO update(@PathVariable Long id, @RequestBody Faculty faculty) {
-        faculty.setId(id);
-        return this.toDTO(service.save(faculty));
+    public StudentDTO update(@PathVariable Long id, @RequestBody Student student) {
+        student.setId(id);
+        return this.toDTO(service.save(student));
     }
 
     @DeleteMapping("/{id}")
@@ -52,11 +52,11 @@ public class FacultyController {
         service.delete(id);
     }
 
-    private FacultyDTO toDTO(Faculty faculty) {
-        return mapper.map(faculty, FacultyDTO.class);
+    private StudentDTO toDTO(Student student) {
+        return mapper.map(student, StudentDTO.class);
     }
 
-    private Faculty toEntity(FacultyDTO faculty) {
-        return mapper.map(faculty, Faculty.class);
+    private Student toEntity(StudentDTO student) {
+        return mapper.map(student, Student.class);
     }
 }

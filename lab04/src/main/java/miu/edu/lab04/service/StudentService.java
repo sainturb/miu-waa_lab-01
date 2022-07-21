@@ -1,6 +1,6 @@
-package miu.edu.lab03.service;
+package miu.edu.lab04.service;
 
-import miu.edu.lab03.model.Student;
+import miu.edu.lab04.model.Student;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,10 +1,6 @@
-package miu.edu.lab03.dto;
+package miu.edu.lab04.dto;
 
 import lombok.Data;
-
-import javax.persistence.*;
-
-import static javax.persistence.InheritanceType.SINGLE_TABLE;
 
 @Data
 public abstract class PersonDTO {

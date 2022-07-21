@@ -1,4 +1,4 @@
-package miu.edu.lab03.model;
+package miu.edu.lab04.model;
 
 import lombok.Data;
 

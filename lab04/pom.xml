@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>miu..edu</groupId>
-	<artifactId>lab03</artifactId>
+	<artifactId>lab04</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>lab03</name>
-	<description>WAA Lab 03 CS545</description>
+	<description>WAA Lab 04 CS545</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
