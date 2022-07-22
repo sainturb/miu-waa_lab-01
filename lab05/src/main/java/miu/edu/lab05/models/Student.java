@@ -1,18 +1,16 @@
-package miu.edu.lab03.model;
+package miu.edu.lab05.models;
 
 import lombok.Data;
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Data
-public class Category {
+public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-    private String name;
-
+    private String firstname;
+    private String lastname;
 }

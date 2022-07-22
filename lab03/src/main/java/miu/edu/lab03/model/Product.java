@@ -17,8 +17,4 @@ public class Product {
 
     @ManyToOne
     private Category category;
-
-//    @JoinColumn
-//    @OneToMany
-//    private List<Review> reviews;
 }
